@@ -4,6 +4,13 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+
+// Route cronjob (rahasia, biar tidak bisa diakses sembarang orang)
+Route::get('/cron/rahasiabanget123', function () {
+    Artisan::call('schedule:run');
+    return response()->json(['status' => 'ok', 'message' => 'Cron executed successfully']);
+});
 
 // Halaman awal (tidak perlu login)
 Route::get('/', function () {
