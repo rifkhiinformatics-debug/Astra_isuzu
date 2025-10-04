@@ -44,10 +44,12 @@
         Simpan
     </button>
 
-    <a href="{{ route('transaksis.index') }}" class="bg-gray-200 text-gray-800 px-4 py-2 rounded shadow hover:bg-gray-300 inline-flex items-center justify-center">
+    <a href="{{ route('dashboard') }}" 
+       class="bg-gray-200 text-gray-800 px-4 py-2 rounded shadow hover:bg-gray-300 inline-flex items-center justify-center">
         Kembali
     </a>
 </div>
+
 
                 </form>
             </div>
