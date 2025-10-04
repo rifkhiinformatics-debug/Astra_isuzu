@@ -12,12 +12,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <!-- Dashboard -->
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    <!-- Tambahan menu Input Transaksi -->
-                    <x-nav-link :href="route('transaksis.create')" :active="request()->routeIs('transaksis.*')">
+                    <!-- Input Transaksi -->
+                    <x-nav-link :href="route('transaksis.index')" :active="request()->routeIs('transaksis.*')">
                         {{ __('Input Transaksi') }}
                     </x-nav-link>
                 </div>
@@ -70,12 +71,13 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            <!-- Dashboard -->
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
 
-            <!-- Tambahan menu Input Transaksi di mobile -->
-            <x-responsive-nav-link :href="route('transaksis.create')" :active="request()->routeIs('transaksis.*')">
+            <!-- Input Transaksi -->
+            <x-responsive-nav-link :href="route('transaksis.index')" :active="request()->routeIs('transaksis.*')">
                 {{ __('Input Transaksi') }}
             </x-responsive-nav-link>
         </div>
