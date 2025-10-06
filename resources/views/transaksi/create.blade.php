@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="mt-4">
-                        <label class="block font-medium">Tanggal Bayar</label>
+                        <label class="block font-medium">Tanggal_follow up</label>
                         <input type="date" name="tanggal_bayar" class="border rounded w-full">
                     </div>
 

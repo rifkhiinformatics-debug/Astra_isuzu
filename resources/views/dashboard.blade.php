@@ -188,7 +188,7 @@
                         <th>#</th>
                         <th>Nama</th>
                         <th>Nomor Customer</th>
-                        <th>Tanggal Bayar</th>
+                        <th>Tanggal_follow up</th>
                         <th style="text-align:center;">Status</th>
                         <th style="text-align:center;">Aksi</th>
                     </tr>

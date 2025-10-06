@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-sm font-medium">Tanggal Bayar</label>
+                    <label class="block text-sm font-medium">Tanggal_follow up</label>
                     <input type="date" name="tanggal_bayar" value="{{ old('tanggal_bayar', $transaksi->tanggal_bayar) }}" class="border rounded w-full p-2">
                 </div>
 
