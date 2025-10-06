@@ -5,6 +5,19 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Mail;
+
+Route::get('/mail-test', function () {
+    try {
+        Mail::raw('Tes kirim email dari Astra Isuzu', function ($message) {
+            $message->to('rifkhisiddo@gmail.com')
+                    ->subject('Tes Email Laravel di Railway');
+        });
+        return 'Email berhasil dikirim!';
+    } catch (Exception $e) {
+        return 'Gagal kirim email: ' . $e->getMessage();
+    }
+});
 
 // Route cronjob (rahasia, biar tidak bisa diakses sembarang orang)
 Route::get('/cron/rahasiabanget123', function () {
