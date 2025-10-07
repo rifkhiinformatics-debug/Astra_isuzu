@@ -21,9 +21,10 @@ Route::get('/mail-test', function () {
 
 // Route cronjob (rahasia, biar tidak bisa diakses sembarang orang)
 Route::get('/cron/rahasiabanget123', function () {
-    Artisan::call('schedule:run');
-    return response()->json(['status' => 'ok', 'message' => 'Cron executed successfully']);
+    Artisan::call('reminders:send');
+    return response()->json(['status' => 'ok', 'message' => 'Reminder executed directly']);
 });
+
 
 // Halaman awal (tidak perlu login)
 Route::get('/', function () {
